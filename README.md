@@ -115,7 +115,7 @@ datas: ./results/{env}/{map}/traitor_ca_mi/maddpg_ca_mi/{token}/{seed}/logs/
 
 ## Demo Videos
 
-We record the behaviors of the agents under the attack in the videos. These videos showcase our methods alongside the baseline methods in the *4m vs 3m* and *9m vs 8m* scenario of the SMAC MARL environment, the *rendezvous* environment and the *real robot* environment, as illustrated in the table below.
+We record the behaviors of the agents under the attack in the videos. These videos showcase our methods alongside the baseline methods in the *4m vs 3m* and *9m vs 8m* scenario of the SMAC MARL environment, the *rendezvous* environment and the *real robot* environment, as illustrated in the table below.You can see this videos in the video file(`./video`), or just click on the corresponding GIF image.
 
 | Training algorithm | SMAC 4m vs 3m                              | SMAC 9m vs 8m                              | rendezvous                       | real robot                       |
 | ------------------ | ------------------------------------------ | ------------------------------------------ | -------------------------------- | -------------------------------- |
