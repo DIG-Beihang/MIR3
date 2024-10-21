@@ -1,0 +1,17 @@
+env: robot
+
+env_args:
+  map_name: robot_10_new
+  nr_agents: 10
+  obs_mode: "fix"
+  comm_radius: 282
+  world_size: 200
+  distance_bins: 8
+  bearing_bins: 8
+  torus: False
+  dynamics: "unicycle_wheel"
+
+# log keys
+sum_keys: [return, reward_run, reward_ctrl]
+last_keys: [ep_length]
+mean_keys: []

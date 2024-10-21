@@ -1,0 +1,55 @@
+adversarial: "traitor_ca_mi"
+
+victim_policy:
+  agent_name: ddpg
+  agent_args:
+    hidden_dim: 256
+    use_rnn: False
+    share_params: True
+
+  checkpoint_path: ""
+
+adversary_policy:
+  adv_agent_ids: [0]
+
+  agent_name: ddpg
+  agent_args:
+    hidden_dim: 256
+    use_rnn: False
+    share_params: True
+
+  learner_name: maddpg_ca_mi
+  learner_args:
+    noise_scale: 0.1
+    start_steps: 20000
+    gamma: 0.99
+    use_adam: True
+    actor_lr: 0.0005
+    critic_lr: 0.0005
+    optim_alpha: 0.99
+    optim_eps: 0.00000001
+    max_grad_norm: 10
+    action_reg: 0
+    target_update_hard: False
+    target_update_interval: 0.01
+    mi_hidden_dim: 256
+    mi_lr: 0.0005
+    mi_epochs: 1
+
+
+  checkpoint_path: ""
+
+# collect and buffer
+sample_timestep: False
+parallel_num: 1
+train_epochs: 1
+batch_size: 8
+neg_buffer_size: 3000
+num_batches: 1
+buffer_size: 5000
+total_timesteps: 10000000
+
+eval_episodes: 32
+save_interval: 100000
+eval_interval: 50000
+log_interval: 5000

@@ -1,0 +1,38 @@
+victim_policy:
+  agent_name: ddpg
+  agent_args:
+    hidden_dim: 128
+    use_rnn: True
+    share_params: True
+
+  learner_name: m3ddpg
+  learner_args:
+    noise_scale: 0.1
+    start_steps: 0
+    gamma: 0.99
+    use_adam: True
+    actor_lr: 0.0005
+    critic_lr: 0.0005
+    optim_alpha: 0.99
+    optim_eps: 0.00000001
+    max_grad_norm: 10
+    action_reg: 0
+    target_update_hard: False
+    target_update_interval: 0.005
+    adv_epsilon: 0.003
+
+  checkpoint_path: ""
+
+# collect and buffer
+sample_timestep: False
+parallel_num: 1
+train_epochs: 1
+batch_size: 32
+num_batches: 1
+buffer_size: 5000
+total_timesteps: 5000000
+
+eval_episodes: 32
+save_interval: 100000
+eval_interval: 50000
+log_interval: 5000

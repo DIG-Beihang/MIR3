@@ -1,0 +1,55 @@
+victim_policy:
+  agent_name: ddpg
+  agent_args:
+    hidden_dim: 128
+    use_rnn: True
+    share_params: True
+
+  learner_name: romq
+  learner_args:
+    noise_scale: 0.1
+    start_steps: 0
+    gamma: 0.99
+    use_adam: True
+    actor_lr: 0.0005
+    critic_lr: 0.0005
+    optim_alpha: 0.99
+    optim_eps: 0.00000001
+    max_grad_norm: 10
+    action_reg: 0
+    target_update_hard: False
+    target_update_interval: 0.05
+    state_prob: 0
+    state_epsilon: 1
+    state_iter: 10
+    state_alpha: 0.3
+    # in discrete action space, no need to set action perturbations
+    action_prob: 0.3
+    action_epsilon: 0.5
+    action_iter: 10
+    action_alpha: 5
+    use_mi: False
+    transition_hidden_dim: 400
+    transition_lr: 0.0005
+    transition_epochs: 5
+    mi_hidden_dim: 400
+    mi_lr: 0.001
+    mi_epochs: 5
+    mine_coef: 0.01
+    club_coef: 0.01
+
+  checkpoint_path: ""
+
+# collect and buffer
+sample_timestep: False
+parallel_num: 1
+train_epochs: 1
+batch_size: 32
+num_batches: 1
+buffer_size: 5000
+total_timesteps: 5000000
+
+eval_episodes: 32
+save_interval: 100000
+eval_interval: 50000
+log_interval: 5000

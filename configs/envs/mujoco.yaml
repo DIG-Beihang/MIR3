@@ -1,0 +1,13 @@
+env: mujoco
+
+env_args:
+  map_name: "HalfCheetah-v2+2x3"  # HalfCheetah-v2+6x1, Ant-v2+2x4, HalfCheetah-v2+2x3, manyagent_swimmer+3x1
+  agent_obsk: 1
+  episode_limit: 1000
+  obs_agent_id: True
+  state_agent_id: True
+
+# log keys
+sum_keys: [return, reward_run, reward_ctrl]
+last_keys: [ep_length]
+mean_keys: []

@@ -1,0 +1,50 @@
+victim_policy:
+    agent_name: mir3
+    agent_args:
+      hidden_dim: 400
+      use_rnn: False
+      share_params: True
+  
+    learner_name: mir3
+    learner_args:
+      noise_scale: 0.1
+      start_steps: 10000
+      gamma: 0.99
+      use_adam: True
+      actor_lr: 0.001
+      critic_lr: 0.001
+      optim_alpha: 0.99
+      optim_eps: 0.01
+      action_reg: 0.001
+      max_grad_norm: 0.5
+      target_update_hard: False
+      target_update_interval: 0.001
+      param_club: 0.01
+  
+    checkpoint_path: ""
+  
+# collect and buffer
+sample_timestep: True
+parallel_num: 1
+train_epochs: 100
+batch_size: 100
+num_batches: 1
+buffer_size: 1000
+total_timesteps: 2000000
+  
+eval_episodes: 32
+save_interval: 50000
+eval_interval: 20000
+log_interval: 2000
+
+pmic_window_size: 1000
+pos_buffer_size: 500
+neg_buffer_size: 1000
+
+  
+# evaluate: True
+# eval_type: "action" # none, obs, action
+# eval_iter: 1
+# eval_epsilon: 1
+# eval_alpha: 1
+  
