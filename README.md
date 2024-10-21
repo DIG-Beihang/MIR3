@@ -124,5 +124,5 @@ We record the behaviors of the agents under the attack in the videos. These vide
 | ROM-Q              | ![](video\SMAC\4m_vs_3m_MADDPG\ROMQ.gif)   | ![](video\SMAC\9m_vs_8m_MADDPG\ROM-Q.gif)  | ![](video\rendezvous\ROM-Q.gif)  | ![](video\real_robot\ROM_Q.gif)  |
 | ERNIE              | ![](video\SMAC\4m_vs_3m_MADDPG\ERNIE.gif)  | ![](video\SMAC\9m_vs_8m_MADDPG\ERNIE.gif)  | ![](video\rendezvous\ERNIE.gif)  | ![](video\real_robot\ERNIE.gif)  |
 | ROMAX              | ![](video\SMAC\4m_vs_3m_MADDPG\ROMAX.gif)  | ![](video\SMAC\9m_vs_8m_MADDPG\ROMAX.gif)  | ![](video\rendezvous\ROMAX.gif)  | ![](video\real_robot\ROMAX.gif)  |
-| MIR3               | ![](video\SMAC\4m_vs_3m_MADDPG\MIR3.gif)   | ![](video\SMAC\9m_vs_8m_MADDPG\MIR3.gif)   | ![](video\rendezvous\MIR3.gif)   | ![](video\real robot\MIR3.gif)   |
+| MIR3               | ![](video\SMAC\4m_vs_3m_MADDPG\MIR3.gif)   | ![](video\SMAC\9m_vs_8m_MADDPG\MIR3.gif)   | ![](video\rendezvous\MIR3.gif)   | ![](video\real_robot\MIR3.gif)   |
 
